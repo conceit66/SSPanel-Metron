@@ -1,5 +1,5 @@
 {if $metron['index_enable'] == true}
-    {include file='index-a.tpl'}
+    {include file='index_jdy.tpl'}
 {else}
     <!DOCTYPE html>
     <html lang="zh-CN">

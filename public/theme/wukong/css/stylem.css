@@ -115,6 +115,7 @@ header {
 .parallax {
   background-attachment: fixed;
 }
+
 .slider {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -128,6 +129,7 @@ header {
   display: flex;
   height: 100%;
 }
+
 .slider h1 {
   color: #fff;
   margin-bottom: 20px;
@@ -153,6 +155,7 @@ header {
   font-size: 16px;
   font-weight: 700;
   padding: 15px 50px;
+  margin-top: 15px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
@@ -203,7 +206,7 @@ header {
 }
 .image-1 {background-image: url("/theme/malio/imgm/slider/4.png");}
 .slide-animation {
-  left: -15px;
+  left: 300px;
   position: absolute;
   z-index:-9;
 }

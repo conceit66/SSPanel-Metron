@@ -39,13 +39,12 @@
                                                         <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>
                                                         <div class="example-preview">
                                                             <p><code>Clash</code>是一款用 Go语言 开发的支持 Linux/MacOS/Windows/Android 等多平台的代理工具，支持 ss/v2ray（不支持 ssr），支持规则分流（类似于 Surge 的配置）。</p>
-                                                            <p><code>Clash(R)</code>则是基于<code>Clash</code>开发，从而支持SSR节点，请注意SS和SSR是有区别的！</p>
                                                             <p>由于客户端长期更新中可能出现界面或功能与教程不符，我们建议您把本教程仅作为参考，具体需要根据自己使用过程中熟悉了解。</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="https://pic.imgdb.cn/item/6225df895baa1a80ab5eda9a.jpg" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="https://pic.imgdb.cn/item/6225df895baa1a80ab5eda9a.jpg"/></a>
                                                     </div>
                                                 </div>
 
@@ -59,8 +58,8 @@
                                                         <p class="mb-2">启动客户端并进行下面操作</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="https://pic.imgdb.cn/item/6225e02e5baa1a80ab5fbf95.jpg" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="https://pic.imgdb.cn/item/6225e02e5baa1a80ab5fbf95.jpg"/></a>
                                                     </div>
                                                 </div>
 
@@ -116,8 +115,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="https://pic.imgdb.cn/item/6225e02e5baa1a80ab5fbf95.jpg" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="https://pic.imgdb.cn/item/6225e02e5baa1a80ab5fbf95.jpg"/></a>
                                                     </div>
                                                 </div>
 
@@ -125,14 +124,34 @@
 
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理并选择节点</strong></p>
+                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理</strong></p>
                                                         <p class="mb-2">点击 <code>已停止</code> 按钮将状态切换至<code>运行中</code></p>
                                                         <p class="mb-2">点击 <code>控制面板</code> 按钮进入节点配置界面</p>
                                                         <p class="mb-2">根据规则设置节点即可</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="https://pic.imgdb.cn/item/6225e04b5baa1a80ab5feaf2.jpg" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="https://pic.imgdb.cn/item/6225e04b5baa1a80ab5feaf2.jpg"/></a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="separator separator-dashed separator-border-4"></div>
+                                                
+                                                <div class="row p-5">
+                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
+                                                        <p class="font-size-h1 pb-5"><strong>4. 选择节点</strong></p>
+                                                        <p class="mb-2">按照下方规则，选择合适配置即可</pp>
+                                                        <br/>
+                                                        <p class="mb-2">如图有许多个菜单栏，每个菜单栏都可以下拉。每个菜单栏都包含有自己的规则，如果访问的网站匹配到了某个菜单栏的规则，则clash会使用该菜单栏下所选的节点，各个菜单栏含义如下:</p>
+                                                        <p class="mb-2">🚀直接连接  不使用代理服务器，而是使用你自己的网络</p>
+                                                        <p class="mb-2">各个节点选项  如果访问的网站匹配到了当前菜单栏记录的网站，则使用选中的节点</p>
+                                                        <p class="mb-2">🔰国外流量  记录了一些国外的网站，但是并不是所有的国外网站，建议在此菜单栏下选择一个节点</p>
+                                                        <p class="mb-2">⚓️其他流量  假如访问的网站没有一个菜单栏是匹配的，则会汇聚到这个菜单栏</p>
+                                                        <p class="mb-2">各个app名字 访问网站假如是所对应的app，这使用该菜单栏下规则</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-12 col-lg-5">
+                                                        <a class="image-popup-no-margins" href="https://pic.imgdb.cn/item/6225e0dc5baa1a80ab607add.jpg" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="https://pic.imgdb.cn/item/6225e0dc5baa1a80ab607add.jpg"/></a>
                                                     </div>
                                                 </div>
 

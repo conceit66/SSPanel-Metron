@@ -356,6 +356,7 @@ class ConfController extends BaseController
 
         $Conf = [
             '#!MANAGED-CONFIG ' . $_ENV['baseUrl'] . $_SERVER['REQUEST_URI'],
+            '#Powered by Sunshin',
             '',
             '#---------------------------------------------------#',
             '## 上次更新于：' . date("Y-m-d h:i:s"),

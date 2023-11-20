@@ -133,6 +133,24 @@ class MetronPay extends AbstractPayment
                         );
                     }
                     return json_encode($return);
+                case ('moepay'):
+                    $pycloudspay = new Moepay();
+                    $result = $pycloudspay->MetronPay($type, $price, $shopinfo, $paylist_id);
+                    if ($result['errcode'] === 0) {
+                        $return = array(
+                            'ret' => 1,
+                            'type' => 'url',
+                            'tradeno' => $result['tradeno'],
+                            'url' => $result['code'],
+                            'errmsg' => $result['msg']
+                        );
+                    } else {
+                        $return = array(
+                            'ret' => 0,
+                            'msg' => $result['errmsg']
+                        );
+                    }
+                    return json_encode($return);
                 case ('f2fpay'):
                     $f2fpay = new AopF2F();
                     $result = $f2fpay->MetronPay($type, $price, $shopinfo, $paylist_id);
@@ -257,6 +275,42 @@ class MetronPay extends AbstractPayment
                         );
                     }
                     return json_encode($return);
+                 case ('pycloudspay'):
+                    $pycloudspay = new Epay();
+                    $result = $pycloudspay->MetronPay($type, $price, $shopinfo, $paylist_id);
+                    if ($result['errcode'] === 0) {
+                        $return = array(
+                            'ret' => 1,
+                            'type' => 'url',
+                            'tradeno' => $result['tradeno'],
+                            'url' => $result['code'],
+                            'errmsg' => $result['msg']
+                        );
+                    } else {
+                        $return = array(
+                            'ret' => 0,
+                            'msg' => $result['errmsg']
+                        );
+                    }
+                    return json_encode($return);
+                case ('moepay'):
+                    $pycloudspay = new Moepay();
+                    $result = $pycloudspay->MetronPay($type, $price, $shopinfo, $paylist_id);
+                    if ($result['errcode'] === 0) {
+                        $return = array(
+                            'ret' => 1,
+                            'type' => 'url',
+                            'tradeno' => $result['tradeno'],
+                            'url' => $result['code'],
+                            'errmsg' => $result['msg']
+                        );
+                    } else {
+                        $return = array(
+                            'ret' => 0,
+                            'msg' => $result['errmsg']
+                        );
+                    }
+                    return json_encode($return);
                 case ('wolfpay_ur'):
                     if ($paylist_id == 0 && $price < 3) {
                         return json_encode(['ret' => 0, 'msg' => '支付系统限制金额需大于3元']);
@@ -369,7 +423,7 @@ class MetronPay extends AbstractPayment
                 default:
                     $return = array(
                         'ret' => 0,
-                        'msg' => $payment_system . ' 支付系统错误,请联系客服'
+                        'msg' => $payment_system . ' 支付系统不支持,请联系客服'
                     );
                     return json_encode($return);
             }
@@ -390,6 +444,42 @@ class MetronPay extends AbstractPayment
                             'type' => 'img',
                             'tradeno' => $result['pid'],
                             'url' => $result['url']
+                        );
+                    } else {
+                        $return = array(
+                            'ret' => 0,
+                            'msg' => $result['errmsg']
+                        );
+                    }
+                    return json_encode($return);
+                case ('moepay'):
+                    $pycloudspay = new Moepay();
+                    $result = $pycloudspay->MetronPay($type, $price, $shopinfo, $paylist_id);
+                    if ($result['errcode'] === 0) {
+                        $return = array(
+                            'ret' => 1,
+                            'type' => 'url',
+                            'tradeno' => $result['tradeno'],
+                            'url' => $result['code'],
+                            'errmsg' => $result['msg']
+                        );
+                    } else {
+                        $return = array(
+                            'ret' => 0,
+                            'msg' => $result['errmsg']
+                        );
+                    }
+                    return json_encode($return);
+                 case ('pycloudspay'):
+                    $pycloudspay = new Epay();
+                    $result = $pycloudspay->MetronPay($type, $price, $shopinfo, $paylist_id);
+                    if ($result['errcode'] === 0) {
+                        $return = array(
+                            'ret' => 1,
+                            'type' => 'url',
+                            'tradeno' => $result['tradeno'],
+                            'url' => $result['code'],
+                            'errmsg' => $result['msg']
                         );
                     } else {
                         $return = array(
@@ -422,7 +512,7 @@ class MetronPay extends AbstractPayment
                 default:
                     $return = array(
                         'ret' => 0,
-                        'msg' => $payment_system . ' 支付系统错误,请联系客服'
+                        'msg' => $payment_system . ' 支付系统不支持,请联系客服'
                     );
                     return json_encode($return);
             }
@@ -466,6 +556,10 @@ class MetronPay extends AbstractPayment
                 return;
             case ('pycloudspay'):
                 $pycloudspay = new Epay();
+                $pycloudspay->notify($request, $response, $args);
+                return;
+            case ('moepay'):
+                $pycloudspay = new Moepay();
                 $pycloudspay->notify($request, $response, $args);
                 return;
             case ('f2fpay'):

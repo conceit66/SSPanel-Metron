@@ -71,6 +71,10 @@
 <!-- hero area start -->
 <div class="hero-area slider-4" id="slider-area">
     <div class="slider">
+       <div class="slide-animation wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s"
+             style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: slideInLeft;">
+            <img src="/theme/wukong/png/10.png" alt="">
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-4 col-sm-offset-4 col-md-8">
@@ -79,14 +83,10 @@
                         <h1>{$i18n->get('index-slogan')}</h1>
                         <p> {$i18n->get('index-text-under-slogan')}</p>
                         <a target="_blank" href="/auth/login" class="hero-btn">登录</a>
-                        <a target="_blank" href="/auth/register" class="hero-btn">免费试用</a>
+                        <a target="_blank" href="/auth/register" class="hero-btn">注册</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="slide-animation wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s"
-             style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: slideInLeft;">
-            <img src="/theme/wukong/png/10.png" alt="">
         </div>
     </div>
 </div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="service-content">
                         <h2>长期运营</h2>
-                        <p>信誉可靠，实力雄厚，提供长期运营的VPN服务</p>
+                        <p>信誉可靠，实力雄厚，提供长期运营的游戏加速服务</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="awesome-feature-details">
                         <h5>教育科研</h5>
-                        <p>筋斗云帮助科研人员科学上网，随时随地查阅科研文献</p>
+                        <p>帮助科研人员科学上网，随时随地查阅科研文献</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +217,7 @@
                     </div>
                     <div class="awesome-feature-details">
                         <h5>视听娱乐</h5>
-                        <p>筋斗云实现颠覆性的4K高清视频超畅快体验</p>
+                        <p>实现颠覆性的4K高清视频超畅快体验</p>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                     </div>
                     <div class="awesome-feature-details">
                         <h5>跨境外贸</h5>
-                        <p>筋斗云帮助外贸人员使用外贸应用连接全球客户</p>
+                        <p>帮助外贸人员使用外贸应用连接全球客户</p>
                     </div>
                 </div>
             </div>
@@ -592,7 +592,7 @@
                                 <i class="icofont icofont-phone"></i>
                             </div>
                             <div class="media-body text-center">
-                                <p>电报群 <br> https://t.me/vpn200g1 </p>
+                                <p>电报群 <br> https://t.me/sunshin6666 </p>
                             </div>
                         </div>
                     </div>

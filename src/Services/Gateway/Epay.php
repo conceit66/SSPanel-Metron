@@ -21,9 +21,9 @@ class Epay extends AbstractPayment
 
     public function __construct()
     {
-        $this->epay['apiurl'] = 'https://pay.pyclouds.com/';//
-        $this->epay['partner'] = $_ENV['pycloudspay']['epay_pid'];//易支付商户pid
-        $this->epay['key'] = $_ENV['pycloudspay']['epay_key'];//易支付商户Key
+        $this->epay['apiurl'] = 'https://sunshin.ml/payment/gettopost';//
+        $this->epay['partner'] = '1218';//易支付商户pid 1174
+        $this->epay['key'] = '3aUrDbztUrnerKXZxERyAoh8jEejZUUt';//'7crE36UzCPrR5C7656rz3ARXrQeGaUCP';//易支付商户Key
         $this->epay['sign_type'] = strtoupper('MD5'); //签名方式
         $this->epay['input_charset'] = strtolower('utf-8');//字符编码
         $this->epay['transport'] = $_ENV['pycloudspay']['transport'];//协议 http 或者https
@@ -55,11 +55,11 @@ class Epay extends AbstractPayment
             "pid" => trim($this->epay['partner']),
             "type" => $type,
             "out_trade_no" => $pl->tradeno,
-            "notify_url" => $_ENV['baseUrl'] . "/payment/notify/pycloudspay",
+            "notify_url" => $_ENV['baseUrl'] . "/payment/notify/pycloudspay/".$user->id,
             "return_url" => $_ENV['baseUrl'] . "/user/payment/return",
-            "name" => $_ENV['appName'] . "充值" . $pl->total . "元",
+            "name" => $user->user_name . "充值" . $pl->total . "元",
             "money" => $pl->total,
-            "sitename" => $_ENV['appName']
+            "sitename" => "joshua"
         );
         $alipaySubmit = new Epay_submit($this->epay);
         $html_text = $alipaySubmit->buildRequestForm($data);
@@ -99,34 +99,38 @@ class Epay extends AbstractPayment
         echo $html_text;
     }
 
+    
+    // 异步回调验证
+	public function verifyNotify($trade_status){
+	if(empty($trade_status)) return false;
+
+        //todo这里要验证一下的
+	
+	if ($trade_status == 'TRADE_SUCCESS') {
+	    echo "success";
+		return true;
+	}
+    else {
+	//验证失败
+	    echo "fail";
+	    return false;
+    }
+	}
+
     public function notify($request, $response, $args)
     {
-        $alipayNotify = new Epay_notify($this->epay);
-        $verify_result = $alipayNotify->verifyNotify();
+        $get_params = $request->getQueryParams();
+        $verify_result = $this->verifyNotify($get_params['trade_status']);
+        
         if ($verify_result) {
-            $out_trade_no = $_GET['out_trade_no'];
-            $type = $_GET['type'];
-            switch ($type) {
-                case 'alipay':
-                    $type = "Epay-支付宝";
-                    break;
-                case 'qqpay':
-                    $type = "Epay-QQ";
-                    break;
-                case 'wxpay':
-                    $type = "Epay-微信";
-                    break;
-            }
-            $trade_status = $_GET['trade_status'];
-            if ($trade_status == 'TRADE_SUCCESS') {
-                $this->postPayment($out_trade_no, $type);
-                return json_encode(['state' => 'success', 'msg' => '支付成功']);
-            }else{
-                return json_encode(['state' => 'fail', 'msg' => '支付失败']);
-            }
-        } else {
-            return '非法请求';
+            $out_trade_no = $get_params['out_trade_no'];
+		    $this->postPayment($out_trade_no, 'SunshinPay');
+		    return;
+        }else{
+            return;
         }
+        
+        
     }
 
     public function getStatus($request, $response, $args)
@@ -145,7 +149,6 @@ class Epay extends AbstractPayment
                             <button class="btn btn-flat waves-attach" id="btnSubmit" type="submit" name="type" value="alipay" ><img src="/images/alipay.jpg" width="50px" height="50px" /></button>
                             <button class="btn btn-flat waves-attach" id="btnSubmit" type="submit" name="type" value="qqpay" ><img src="/images/qqpay.jpg" width="50px" height="50px" /></button>
                             <button class="btn btn-flat waves-attach" id="btnSubmit" type="submit" name="type" value="wxpay" ><img src="/images/weixin.jpg" width="50px" height="50px" /></button>
-
                         </form>
                         </div>
 ';

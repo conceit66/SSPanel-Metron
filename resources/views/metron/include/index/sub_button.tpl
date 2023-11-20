@@ -13,9 +13,9 @@
                                                         {if in_array('clash',$metron['index_sub'])}
                                                         <!-- Clash订阅 -->
                                                         <div class="btn-group mb-3 mr-3">
-                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="metron-clash text-white"></i>&nbsp;&nbsp;Clash 订阅&nbsp;&nbsp;</button>
+                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="metron-clash text-white"></i>&nbsp;&nbsp;Clash for Windows/Android 订阅&nbsp;&nbsp;</button>
                                                             <div class="dropdown-menu">
-                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>
+                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash for Windows/Android订阅</button>
                                                                 <div class="dropdown-divider">
                                                                 </div>
                                                                 <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>
@@ -83,10 +83,16 @@
                                                             <button type="button" class="btn btn-pill btn-v2ray copy-text" data-clipboard-text="{$subInfo["v2ray"]}"><i class="metron-v2rayng text-white"></i>&nbsp;&nbsp;复制 V2Ray 订阅&nbsp;&nbsp;</button>
                                                         </div>
                                                         {/if}
+                                                        {if in_array('netch',$metron['index_sub'])}
+                                                            <!-- V2Ray订阅 -->
+                                                            <div class="btn-group mb-3 mr-3">
+                                                                <button type="button" class="btn btn-pill btn-v2ray copy-text" data-clipboard-text="{$subInfo["v2ray"]}"><i class="metron-v2rayng text-white"></i>&nbsp;&nbsp;复制 Netch 订阅&nbsp;&nbsp;</button>
+                                                            </div>
+                                                        {/if}
                                                         {if in_array('v2ray',$metron['index_sub'])}
                                                             <!-- V2Ray订阅 -->
                                                             <div class="btn-group mb-3 mr-3">
-                                                                <button type="button" class="btn btn-pill btn-v2ray copy-text" data-clipboard-text="{$subInfo["v2ray_vless"]}"><i class="metron-v2rayng text-white"></i>&nbsp;&nbsp;复制 V2Ray-VLESS 订阅&nbsp;&nbsp;</button>
+                                                                <button type="button" class="btn btn-pill btn-v2ray copy-text" data-clipboard-text="{$subInfo["v2ray"]}"><i class="metron-v2rayng text-white"></i>&nbsp;&nbsp;复制 V2rayng 订阅&nbsp;&nbsp;</button>
                                                             </div>
                                                         {/if}
                                                         {if in_array('surfboard',$metron['index_sub'])}

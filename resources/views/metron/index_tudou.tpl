@@ -4,7 +4,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
     <title>{$config['appName']}</title>
     <meta name="description" content="畅享全球无限制的访问！">
-    <meta name="keywords" content="{$config['appName']} 翻墙软件 V2ray SSR trojan 留学生回国上网课必备"><link rel="apple-touch-icon-precomposed" href="images/avatar.bab2b7d4.jpeg">
+    <meta name="keywords" content="{$config['appName']} 游戏加速软件 V2ray SSR trojan youtube必备"><link rel="apple-touch-icon-precomposed" href="images/avatar.bab2b7d4.jpeg">
     <link rel="stylesheet" type="text/css" href="/theme/tudou/css/h.9c69ed6c.css">
     <link rel="stylesheet" type="text/css" href="/theme/tudou/css/nekotora.99cf6f8c.css">
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-137340638-1"></script>

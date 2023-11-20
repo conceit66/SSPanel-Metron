@@ -141,6 +141,7 @@
                                                             </a>
                                                         </li>
                                                         {/if}
+                                                        {if true}
                                                         <li class="menu-item" aria-haspopup="true">
                                                             <a href="/user/setting/invite" class="menu-link">
                                                                 <span class="svg-icon menu-icon">
@@ -155,6 +156,7 @@
                                                                 <span class="menu-text">邀请注册</span>
                                                             </a>
                                                         </li>
+                                                        {/if}
                                                         <li class="menu-item" aria-haspopup="true">
                                                             <a href="/user/setting/telegram" class="menu-link">
                                                                 <span class="svg-icon menu-icon">
@@ -188,11 +190,6 @@
                                             <li class="menu-item menu-item-submenu menu-item-rel">
                                                 <a href="/user/help" class="menu-link">
                                                     <span class="menu-text"><strong>使用教程</strong></span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item menu-item-submenu menu-item-rel">
-                                                <a href="/user/help" class="menu-link" target="_blank">
-                                                    <span class="menu-text"><strong>在线QQ</strong></span>
                                                 </a>
                                             </li>
                                             {if $metron['agent_menu_enable'] === true && $user->agent > 0}

@@ -191,8 +191,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-7">
-                                        <!-- 客户端下载 -->
-                                        {include file='include/index/client.tpl'}
                                         <!-- 公告-->
                                         <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}"
                                              {if $theme_style !== 'dark'}style="background-position: right top; background-size: 30% auto; background-image: url({$metron['assets_url']}/media/svg/shapes/abstract-2.svg)" {/if}>
@@ -210,6 +208,8 @@
                                                 <div class="text-dark-50 font-weight-normal font-size-lg-h4 font-size-h5">{$ann->content}</div>
                                             </div>
                                         </div>
+                                        <!-- 客户端下载 -->
+                                        {include file='include/index/client.tpl'}
                                     </div>
 
                                     <div class="col-lg-5">

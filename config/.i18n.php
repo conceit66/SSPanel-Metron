@@ -197,18 +197,18 @@ $I18N['plans-info'] = array(
     ],
     'zh-cn' => [
         'plan_1' => array(
-            'name' => '标准版',
-            'price' => '9.9',
+            'name' => '钻石会员',
+            'price' => '8.0',
             'currency' => '¥',
             'billing' => '每月',
             'features' => [
                 array(
                     'support' => true,
-                    'name' => '50GB 使用流量'
+                    'name' => '80GB 使用流量'
                 ),
                 array(
                     'support' => true,
-                    'name' => '2个 在线客户端'
+                    'name' => '3个 在线客户端'
                 ),
                 array(
                     'support' => true,
@@ -219,70 +219,6 @@ $I18N['plans-info'] = array(
                     'name' => '国际标准节点'
                 ),
                 array(
-                    'support' => false,
-                    'name' => '国内中转节点'
-                ),
-                array(
-                    'support' => false,
-                    'name' => 'IPLC专线节点'
-                ),
-            ]
-        ),
-        'plan_2' => array(
-            'name' => '高级版',
-            'price' => '19.9',
-            'currency' => '¥',
-            'billing' => '每月',
-            'features' => [
-                array(
-                    'support' => true,
-                    'name' => '100GB 使用流量'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '4个 在线客户端'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '24/7 在线技术支持'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '国际标准节点'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '国内中转节点'
-                ),
-                array(
-                    'support' => false,
-                    'name' => 'IPLC专线节点'
-                ),
-            ]
-        ),
-        'plan_3' => array(
-            'name' => '加强版',
-            'price' => '29.9',
-            'currency' => '¥',
-            'billing' => '每月',
-            'features' => [
-                array(
-                    'support' => true,
-                    'name' => '300GB 使用流量'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '8个 在线客户端'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '24/7 在线技术支持'
-                ),
-                array(
-                    'support' => true,
-                    'name' => '国际标准节点'
-                ),
-                array(
                     'support' => true,
                     'name' => '国内中转节点'
                 ),
@@ -292,6 +228,7 @@ $I18N['plans-info'] = array(
                 ),
             ]
         ),
+        
     ]
 );
 

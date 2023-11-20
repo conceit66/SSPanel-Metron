@@ -57,7 +57,6 @@ abstract class AbstractPayment
         if ($p->status == 1) {
             return ['errcode' => 0, 'errmsg' => '交易已完成'];
         }
-
         $p->status = 1;
         $p->save();
         $user = User::find($p->userid);
@@ -97,6 +96,8 @@ abstract class AbstractPayment
 
     public static function generateGuid()
     {
+        return date('Ymdhis', time()).rand(10,99);
+        // 下面是原算法
         mt_srand((double)microtime() * 10000);
         $charid = strtoupper(md5(uniqid(mt_rand() + time(), true)));
         $hyphen = chr(45);

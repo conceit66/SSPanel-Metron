@@ -295,7 +295,7 @@
                 </span>
                 </label>
                 <div class="form-group row form-group-marginless" style="display: none" id="shop_payment">
-                    <label class="col-lg-12 col-form-label kt-font-boldest">支付方式：</label>
+                    <label class="col-lg-12 col-form-label kt-font-boldest">支付方式 (费率为支付商收取)：</label>
                     <div class="col-lg-12">
                         <ul class="dashboard-tabs nav nav-pills row row-paddingless m-0 p-0" role="tablist" id="pay_the">
                         {if $config['payment_system'] == 'metronpay'}
@@ -306,6 +306,7 @@
                                         <i class="fab fa-alipay icon-2x"></i>
                                     </span>
                                     <span class="nav-text font-size-lg py-2 font-weight-bold text-center">支付宝</span>
+                                     <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_alipay']}%</span>
                                 </a>
                             </li>
                             {/if}
@@ -316,6 +317,7 @@
                                         <i class="fab fa-weixin icon-2x"></i>
                                     </span>
                                     <span class="nav-text font-size-lg py-2 font-weight-bold text-center">微信支付</span>
+                                    <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_wxpay']}%</span>
                                 </a>
                             </li>
                             {/if}
@@ -326,6 +328,7 @@
                                         <i class="fab fa-qq icon-2x"></i>
                                     </span>
                                     <span class="nav-text font-size-lg py-2 font-weight-bold text-center">QQ钱包</span>
+                                    <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_qqpay']}%</span>
                                 </a>
                             </li>
                             {/if}

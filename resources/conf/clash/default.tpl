@@ -1114,4 +1114,4 @@
   - IP-CIDR,119.28.28.28/32,DIRECT,no-resolve
   - GEOIP,CN,DIRECT
 
-  - MATCH,⚓️其他流量
+  - MATCH,漏网之鱼

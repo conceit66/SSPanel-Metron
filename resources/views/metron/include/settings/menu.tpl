@@ -150,6 +150,7 @@
                                                         </a>
                                                     </div>
                                                     {/if}
+                                                    {if true}
                                                     <div class="navi-item mb-2">
                                                         <a href="/user/setting/invite" class="navi-link py-4">
                                                             <span class="navi-icon mr-2">
@@ -166,6 +167,7 @@
                                                             <span class="navi-text">邀请注册</span>
                                                         </a>
                                                     </div>
+                                                    {/if}
                                                     <div class="navi-item mb-2">
                                                         <a href="/user/setting/telegram" class="navi-link py-4">
                                                             <span class="navi-icon mr-2">

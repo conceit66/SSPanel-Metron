@@ -167,6 +167,8 @@ return function (SlimApp $app) {
         $this->get('/notify/{type}/{method}',  App\Services\Payment::class . ':notify');
         $this->post('/notify/{type}/{method}', App\Services\Payment::class . ':notify');
         $this->post('/status',                 App\Services\Payment::class . ':getStatus');
+        $this->get('/gettopost',  App\Services\Gateway\Epay\Epay_sunshin_gettopost::class. ':gettopost');   //gettopost
+        $this->get('/gettopostmoepay',  App\Services\Gateway\Epay\Epay_sunshin_gettopost_moepay::class. ':gettopost');   //gettopost
     });
 
     // Auth
@@ -198,6 +200,11 @@ return function (SlimApp $app) {
 
         $this->get('/trafficlog',               App\Controllers\AdminController::class . ':trafficLog');
         $this->post('/trafficlog/ajax',         App\Controllers\AdminController::class . ':ajax_trafficLog');
+        
+        $this->get('/paylistlog',               App\Controllers\Admin\PayListLogController::class . ':payListLog');
+        $this->post('/paylistlog/ajax',         App\Controllers\Admin\PayListLogController::class . ':ajax_paylistLog');
+        $this->get('/paylistlog/{id}/change',   App\Controllers\Admin\PayListLogController::class . ':change');
+        
         // Node Mange
         $this->get('/node',                     App\Controllers\Admin\NodeController::class . ':index');
 
@@ -467,5 +474,8 @@ return function (SlimApp $app) {
         $this->get('/node',          App\Controllers\Api\V1\ApiController::class . ':node')->add(new Api());
         $this->get('/user/{id}',     App\Controllers\Api\V1\ApiController::class . ':userInfo')->add(new Api());
         $this->get('/sublink',       App\Controllers\Api\Client\ClientApiController::class . ':GetSubLink');
+        $this->get('/qqbot', App\sunshin\QQbot::class . ':getInfo');
+        $this->get('/clash', App\sunshin\Clash::class . ':getInfo');
+        
     });
 };

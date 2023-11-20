@@ -34,7 +34,7 @@
                     </div>
                 </header>
                 <h2><span class="line line-1">可能是<span class="moji-1">最萌</span>的</span> <span
-                            class="line line-2">云计算服务商</span></h2><i class="bg"></i> <i class="hr"></i>
+                            class="line line-2">游戏加速服务商</span></h2><i class="bg"></i> <i class="hr"></i>
                 <div class="shell-box"><i class="shell-shadow"></i> <i class="shell"><span></span></i></div>
                 <a class="link-reg" href="/auth/register">开始使用</a><i class="light"></i></div>
         </div>
@@ -44,29 +44,29 @@
         <div class="content"><h3 class="ui-h ui-h-1">技术优势</h3>
             <ul>
                 <li class="feature-1">
-                    <div class="icon"><i></i><big>1</big><cite>Second</cite></div>
-                    <h4>秒级状态监控</h4>
-                    <p>感受云主机心跳，性能瓶颈秒定位</p></li>
+                    <div class="icon"><i></i><big>1</big><cite>Ms</cite></div>
+                    <h4>毫秒级全球延迟</h4>
+                    <p>感受世界的近在咫尺，世界毫秒连接</p></li>
                 <li class="feature-2">
                     <div class="icon"><i></i><big>1</big><cite>Minute</cite></div>
-                    <h4>50 秒即开即用</h4>
-                    <p>分钟建好云主机，想码就码无压力</p></li>
+                    <h4>一键连接</h4>
+                    <p>分钟连上网络，畅游互联网</p></li>
                 <li class="feature-3">
-                    <div class="icon"><i></i><big>1</big><cite>Hour</cite></div>
-                    <h4>颗粒化小时计费</h4>
-                    <p>按需计费才是真正的云计算！</p></li>
+                    <div class="icon"><i></i><big>1</big><cite>Dollar</cite></div>
+                    <h4>提供性价比服务</h4>
+                    <p>真正平价的加速服务！</p></li>
                 <li class="feature-4">
                     <div class="icon"><i></i><big>1000</big><cite>Mbps</cite></div>
-                    <h4>千兆内网互联</h4>
-                    <p>内部开源镜像站，升级无需再等待</p></li>
+                    <h4>高达千兆网络互联</h4>
+                    <p>超大服务器带宽，视频游戏不再卡顿</p></li>
                 <li class="feature-5">
                     <div class="icon"><i></i><big></big><cite>SmartQuota</cite></div>
                     <h4>动态资源配额</h4>
                     <p>大户邻居不可怕，智能配额控制它</p></li>
                 <li class="feature-6">
                     <div class="icon"><i></i><cite>API</cite></div>
-                    <h4>开放接口支持</h4>
-                    <p>集群维护从此变得So Easy！</p></li>
+                    <h4>原生IP，宛若当地</h4>
+                    <p>和游戏视频锁区say NO！</p></li>
             </ul>
         </div>
         <i class="after"></i></article>
@@ -91,16 +91,16 @@
             {/foreach}
         </ul>
         <div class="note layout" id="price-note"><p>※
-                数据中心覆盖中国(香港)、日本(东京、大阪)、美国(洛杉矶、圣何塞)、新加坡、英国(伦敦)、德国(法兰克福)、荷兰(阿姆斯特丹)</p></div>
+                数据中心覆盖中国(香港)、日本(东京、大阪)、美国(洛杉矶)、更多线路支持中</p></div>
     </article>
     <article class="step-4">
         <div id="step4">
             <div class="content"><i></i>
-                <h3 class="ui-h ui-h-3">硬件高防</h3>
-                <div class="note layout"><p>采用金盾集群进行清洗</p>
-                    <p>一分钟内自动检测 3-7 层攻击包特征启动防御方案</p></div>
+                <h3 class="ui-h ui-h-3">隐私防护</h3>
+                <div class="note layout"><p>支持 V2RAY+独家协议网络双栈加速技术</p>
+                    <p>强力守护您的隐私</p></div>
                 <a class="button" href="/user/shop" target="_blank">进入使用</a>
-                <div class="note layout"><p class="op5">最高可定制升级至 200G 保护</p></div>
+            
             </div>
             <i class="shell-2"></i></div>
     </article>

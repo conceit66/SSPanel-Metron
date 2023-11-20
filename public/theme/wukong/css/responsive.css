@@ -266,7 +266,7 @@
 	}
 	.slide-animation {
 	  left: 65px;
-	  position: absolute;
+	  position: inherit;
 	  top: 62%;
 	  width: 75%;
 	  z-index: -9;

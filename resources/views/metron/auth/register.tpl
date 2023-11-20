@@ -21,7 +21,7 @@
                                         <div class="col-6">
                                             <div class="form-group mb-0">
                                                 {if $metron['register_code'] === true}
-                                                <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mt-5" data-code="true" type="text" placeholder="邀请码" name="code" id="code" autocomplete="new-password" />
+                                                <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mt-5" data-code="true" type="text" placeholder="乖小孩都有的邀请码" name="code" id="code" autocomplete="new-password" />
                                                 {else}
                                                 <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mt-5" data-code="false" type="text" placeholder="邀请码(可留空)" name="code" id="code" autocomplete="new-password" />
                                                 {/if}
@@ -89,18 +89,18 @@
                                     </div>
                                 {/if}
                                 <div class="form-group d-flex flex-wrap justify-content-between align-items-center px-5">
-                                    <label class="checkbox checkbox-outline checkbox-white text-white m-0">
-                                        <input type="checkbox" id="agree" name="agree"/>注册即代表同意 <a class="text-white font-weight-bold" data-toggle="modal" data-target="#tos-modal"><strong>服务条款</strong></a>
+                                    <label class="checkbox checkbox-outline checkbox-dark text-black m-0">
+                                        <input type="checkbox" id="agree" name="agree"/>注册即代表同意 <a class="text-black font-weight-bold" data-toggle="modal" data-target="#tos-modal"><strong>服务条款</strong></a>
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="form-group text-center mt-10" style="white-space:nowrap;">
-                                    <button type="button" id="register_submit" class="btn btn-pill btn-outline-white btn-block font-weight-bold opacity-90 px-15 py-3 ">注册</button>
+                                    <button type="button" id="register_submit" class="btn btn-pill btn-outline-dark btn-block font-weight-bold opacity-90 px-15 py-3 ">注册</button>
                                 </div>
                             </form>
                             <div class="mt-10">
                                 <span class="opacity-70 mr-4">已经有账号 ?</span>
-                                <a href="/auth/login" class="text-white font-weight-bold">立即登录</a>
+                                <a href="/auth/login" class="text-dark font-weight-bold">立即登录</a>
                             </div>
                         </div>
 

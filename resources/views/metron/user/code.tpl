@@ -221,8 +221,9 @@
 <div class="modal fade" id="metronPay_modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content shadow-lg">
-            <div class="modal-header">
+            <div class="modal-header" style="flex-direction:column;align-items:start">
                 <h4 class="modal-title {$style[$theme_style]['modal']['text_title']}"><strong>选择支付方式</strong></h4>
+                <span class="py-2">费率为对接支付商收取</span>
             </div>
             <div class="modal-body pb-0">
                 <div class="form-group row form-group-marginless">
@@ -237,6 +238,7 @@
                                             <i class="fab fa-alipay icon-2x"></i>
                                         </span>
                                         <span class="nav-text font-size-lg py-2 font-weight-bold text-center">支付宝</span>
+                                        <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_alipay']}%</span>
                                     </a>
                                 </li>
                                 {/if}
@@ -247,6 +249,7 @@
                                             <i class="fab fa-weixin icon-2x"></i>
                                         </span>
                                         <span class="nav-text font-size-lg py-2 font-weight-bold text-center">微信支付</span>
+                                        <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_wxpay']}%</span>
                                     </a>
                                 </li>
                                 {/if}
@@ -257,6 +260,7 @@
                                             <i class="fab fa-qq icon-2x"></i>
                                         </span>
                                         <span class="nav-text font-size-lg py-2 font-weight-bold text-center">QQ钱包</span>
+                                        <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_qqpay']}%</span>
                                     </a>
                                 </li>
                                 {/if}
@@ -287,8 +291,9 @@
 <div class="modal fade" id="metronPay_restart_modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content shadow-lg">
-            <div class="modal-header">
+            <div class="modal-header" style="flex-direction:column;align-items:start">
                 <h4 class="modal-title {$style[$theme_style]['modal']['text_title']}"><strong>选择支付方式</strong></h4>
+                <span class="py-2">费率为对接支付商收取</span>
             </div>
             <div class="modal-body pb-0">
                 <div class="form-group row form-group-marginless">
@@ -303,6 +308,7 @@
                                             <i class="fab fa-alipay icon-2x"></i>
                                         </span>
                                         <span class="nav-text font-size-lg py-2 font-weight-bold text-center">支付宝</span>
+                                        <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_alipay']}%</span>
                                     </a>
                                 </li>
                                 {/if}
@@ -313,6 +319,7 @@
                                             <i class="fab fa-weixin icon-2x"></i>
                                         </span>
                                         <span class="nav-text font-size-lg py-2 font-weight-bold text-center">微信支付</span>
+                                        <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_wxpay']}%</span>
                                     </a>
                                 </li>
                                 {/if}
@@ -323,6 +330,7 @@
                                             <i class="fab fa-qq icon-2x"></i>
                                         </span>
                                         <span class="nav-text font-size-lg py-2 font-weight-bold text-center">QQ钱包</span>
+                                        <span class="nav-text font-size-lg py-2 font-weight-bold text-center">费率: {$metron['rate_qqpay']}%</span>
                                     </a>
                                 </li>
                                 {/if}
