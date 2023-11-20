@@ -300,8 +300,8 @@
                         <ul class="dashboard-tabs nav nav-pills row row-paddingless m-0 p-0" role="tablist" id="pay_the">
                         {if $config['payment_system'] == 'metronpay'}
                             {if $metron['pay_alipay'] != 'none' && $metron['pay_alipay'] != ''}
-                            <li class="nav-alipay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
-                                <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center active" data-toggle="pill" data-name="alipay">
+                                <li class="nav-alipay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
+                                    <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center active" data-toggle="pill" data-name="pay_alipay">
                                     <span class="nav-icon py-2 w-auto">
                                         <i class="fab fa-alipay icon-2x"></i>
                                     </span>
@@ -311,8 +311,8 @@
                             </li>
                             {/if}
                             {if $metron['pay_wxpay'] != 'none' && $metron['pay_wxpay'] != ''}
-                            <li class="nav-wxpay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
-                                <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center {if $metron['pay_alipay'] == 'none' || $metron['pay_alipay'] == ''}active{/if}" data-toggle="pill" data-name="wxpay">
+                                <li class="nav-wxpay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
+                                    <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center" data-toggle="pill" data-name="pay_wxpay">
                                     <span class="nav-icon py-2 w-auto">
                                         <i class="fab fa-weixin icon-2x"></i>
                                     </span>
@@ -323,7 +323,7 @@
                             {/if}
                             {if $metron['pay_qqpay'] != 'none' && $metron['pay_qqpay'] != ''}
                             <li class="nav-qqpay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
-                                <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center {if ($metron['pay_alipay'] == 'none' || $metron['pay_alipay'] == '') && ($metron['pay_wxpay'] == 'none' || $metron['pay_wxpay'] == '')}active{/if}" data-toggle="pill" data-name="qqpay">
+                                <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center {if ($metron['pay_alipay'] == 'none' || $metron['pay_alipay'] == '') && ($metron['pay_wxpay'] == 'none' || $metron['pay_wxpay'] == '')}active{/if}" data-toggle="pill" data-name="pay_qqpay">
                                     <span class="nav-icon py-2 w-auto">
                                         <i class="fab fa-qq icon-2x"></i>
                                     </span>
@@ -334,7 +334,7 @@
                             {/if}
                             {if $metron['pay_crypto'] != 'none' && $metron['pay_crypto'] != ''}
                             <li class="nav-crypto nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
-                                <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center" data-toggle="pill" data-name="crypto">
+                                <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center" data-toggle="pill" data-name="pay_crypto">
                                     <span class="nav-icon py-2 w-auto">
                                         <i class="fab fa-bitcoin icon-2x"></i>
                                     </span>

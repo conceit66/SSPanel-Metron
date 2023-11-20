@@ -390,11 +390,6 @@ class MetronController extends BaseController
      */
     public function PackageConversion($request, $response, $args)
     {
-        $mt = MtAuth::Auth();
-        if (!$mt['ret']) {
-            return $response->getBody()->write(json_encode($mt, JSON_UNESCAPED_UNICODE));
-        }
-
         if (!MetronSetting::get('shop_conversion')) {
             $res = ['ret' => 0, 'msg' => '管理员设置不允许折算'];
             return $response->getBody()->write(json_encode($res, JSON_UNESCAPED_UNICODE));
@@ -640,7 +635,7 @@ class MetronController extends BaseController
                     $dataarr['shopid'] = $shop->shopid;
                     $dataarr['shopname'] = $shop->shop()->name;
                     $dataarr['datetime'] = date('Y-m-d H:i:s', $shop->datetime);
-                    $dataarr['renew'] = $shop->renew != 0 ?: '不自动续费';
+                    $dataarr['renew'] = $shop->renew != 0 ? $shop->renew_date() : '不自动续费';
                     $dataarr['auto_reset'] = $shop->shop()->auto_reset_bandwidth != 0 ? '自动重置' : '不自动重置';
                     $dataarr['price'] = $shop->price;
                     $dataarr['usedd'] = $shop->usedd;

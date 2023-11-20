@@ -173,7 +173,7 @@ class Job extends Command
             }
         }
 
-        $users = User::select(['id', 'u', 'd', 'last_day_t', 'auto_reset_day', 'transfer_enable', 'auto_reset_bandwidth'])->get();
+        $users = User::select(['id', 'u', 'd', 'last_day_t', 'auto_reset_day', 'transfer_enable', 'auto_reset_bandwidth'], 'email')->get();
         foreach ($users as $user) {
             $user->last_day_t = ($user->u + $user->d);
             $user->save();
@@ -198,8 +198,14 @@ class Job extends Command
             }
         }
         echo '重置用户流量成功;' . PHP_EOL;
-
-        $qqwry = file_get_contents('http://qqwry.mirror.noc.one/QQWry.Dat?from=sspanel_uim');
+        
+        $stream_opts = [
+            "ssl" => [
+                "verify_peer"=>false,
+                "verify_peer_name"=>false,
+            ]
+        ];
+        $qqwry = file_get_contents('http://qqwry.mirror.noc.one/QQWry.Dat?from=sspanel_uim', false, stream_context_create($stream_opts));
         if ($qqwry != '') {
             rename(BASE_PATH . '/storage/qqwry.dat', BASE_PATH . '/storage/qqwry.dat.bak');
             $fp = fopen(BASE_PATH . '/storage/qqwry.dat', 'wb');
@@ -845,7 +851,7 @@ class Job extends Command
     {
         $users = User::query()
             ->where('class_expire', '<', date('Y-m-d H:i:s', time()))
-            ->where('class', '!=', 0)
+            ->where('class', '>', 0)
             ->where('is_admin', '!=', 1)
             ->get();
 

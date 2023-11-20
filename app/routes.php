@@ -210,6 +210,7 @@ return function (SlimApp $app) {
 
         $this->get('/node/create',              App\Controllers\Admin\NodeController::class . ':create');
         $this->post('/node',                    App\Controllers\Admin\NodeController::class . ':add');
+        $this->post('/node/copy',               App\Controllers\Admin\NodeController::class . ':copy');
         $this->get('/node/{id}/edit',           App\Controllers\Admin\NodeController::class . ':edit');
         $this->put('/node/{id}',                App\Controllers\Admin\NodeController::class . ':update');
         $this->delete('/node',                  App\Controllers\Admin\NodeController::class . ':delete');
@@ -230,6 +231,9 @@ return function (SlimApp $app) {
         $this->delete('/relay',                 App\Controllers\Admin\RelayController::class . ':delete');
         $this->get('/relay/path_search/{id}',   App\Controllers\Admin\RelayController::class . ':path_search');
         $this->post('/relay/ajax',              App\Controllers\Admin\RelayController::class . ':ajax_relay');
+
+        $this->get('/paylist',                   App\Controllers\Admin\PayListController::class . ':index');
+        $this->post('/paylist/ajax',             App\Controllers\Admin\PayListController::class . ':ajax_paylist');
 
         // Shop Mange
         $this->get('/shop',                     App\Controllers\Admin\ShopController::class . ':index');
@@ -302,7 +306,11 @@ return function (SlimApp $app) {
 
 
         $this->get('/coupon',                   App\Controllers\AdminController::class . ':coupon');
+        $this->get('/coupon/create',            App\Controllers\AdminController::class . ':createCoupon');
+        $this->get('/coupon/{id}/edit',         App\Controllers\AdminController::class . ':editCoupon');
+        $this->put('/coupon/{id}',              App\Controllers\AdminController::class . ':updateCoupon');
         $this->post('/coupon',                  App\Controllers\AdminController::class . ':addCoupon');
+        $this->delete('/coupon',                App\Controllers\AdminController::class . ':deleteCoupon');
         $this->post('/coupon/ajax',             App\Controllers\AdminController::class . ':ajax_coupon');
 
         $this->get('/profile',                  App\Controllers\AdminController::class . ':profile');
@@ -360,7 +368,13 @@ return function (SlimApp $app) {
         });
         // admin 增加收入和新用户统计
         $this->get('/api/analytics/income',     App\Controllers\AdminController::class . ':getIncome');
-        $this->get('/api/analytics/new-users',  App\Controllers\AdminController::class . ':newUsers');
+        $this->get('/api/analytics/node',     App\Controllers\AdminController::class . ':getNodeTraffic');
+        $this->get('/api/analytics/userTraffic',     App\Controllers\AdminController::class . ':getUserTraffic');
+        $this->get('/api/analytics/new_users',  App\Controllers\AdminController::class . ':newUsers');
+        $this->get('/api/analytics/ref_user_count',  App\Controllers\AdminController::class . ':getRefUserCount');
+        $this->get('/api/analytics/ref_money_count',  App\Controllers\AdminController::class . ':getRefMoneyCount');
+        $this->get('/api/analytics/get_order_detail',  App\Controllers\AdminController::class . ':getOrderDetail');
+        $this->get('/api/analytics/get_ticket_detail',  App\Controllers\AdminController::class . ':getTicketDetail');
 
         # Metron
         // Help Mange
@@ -392,6 +406,8 @@ return function (SlimApp $app) {
 
     // mu
     $app->group('/mod_mu', function () {
+        // 流媒体检测
+        $this->post('/media/saveReport',    App\Controllers\Mod_Mu\NodeController::class . ':saveReport');
         $this->get('/nodes/{id}/info',      App\Controllers\Mod_Mu\NodeController::class . ':get_info');
         $this->get('/users',                App\Controllers\Mod_Mu\UserController::class . ':index');
         $this->post('/users/traffic',       App\Controllers\Mod_Mu\UserController::class . ':addTraffic');
